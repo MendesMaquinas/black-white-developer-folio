@@ -1,8 +1,10 @@
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import gsap from "gsap";
 import { Project, getProjects } from "@/components/ProjectsSection";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const ProjectDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -11,6 +13,8 @@ const ProjectDetail = () => {
   const headerRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const galleryRef = useRef<HTMLDivElement>(null);
+  
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   
   useEffect(() => {
     if (!headerRef.current) return;
@@ -38,6 +42,14 @@ const ProjectDetail = () => {
       tl.kill();
     };
   }, [project]);
+  
+  const handleImageClick = (image: string) => {
+    setSelectedImage(image);
+  };
+  
+  const handleCloseDialog = () => {
+    setSelectedImage(null);
+  };
   
   if (!project) {
     return (
@@ -106,7 +118,11 @@ const ProjectDetail = () => {
           className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12"
         >
           {project.images.map((image, index) => (
-            <div key={index} className="overflow-hidden rounded-lg">
+            <div 
+              key={index} 
+              className="overflow-hidden rounded-lg cursor-pointer transition-all hover:shadow-lg"
+              onClick={() => handleImageClick(image)}
+            >
               <img 
                 src={image} 
                 alt={`${project.title} - imagem ${index + 1}`}
@@ -128,6 +144,23 @@ const ProjectDetail = () => {
           </Link>
         </div>
       </div>
+      
+      {/* Image Dialog */}
+      <Dialog open={!!selectedImage} onOpenChange={handleCloseDialog}>
+        <DialogContent className="max-w-5xl p-0 bg-black border-none overflow-hidden" onPointerDownOutside={handleCloseDialog}>
+          <div className="w-full flex items-center justify-center p-2">
+            <AspectRatio ratio={16 / 9} className="w-full">
+              {selectedImage && (
+                <img 
+                  src={selectedImage} 
+                  alt="Imagem expandida" 
+                  className="w-full h-full object-contain"
+                />
+              )}
+            </AspectRatio>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
