@@ -4,8 +4,6 @@ import gsap from "gsap";
 import { Project, getProjects } from "@/components/ProjectsSection";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const ProjectDetail = () => {
   const { id } = useParams<{ id: string }>();
