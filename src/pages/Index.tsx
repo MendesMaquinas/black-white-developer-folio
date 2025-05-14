@@ -11,7 +11,6 @@ import gsap from "gsap";
 
 const Index = () => {
   useEffect(() => {
-    // Initial page animation
     gsap.to('body', { 
       opacity: 1,
       duration: 0.6,

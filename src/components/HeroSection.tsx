@@ -45,13 +45,13 @@ const HeroSection = () => {
           ref={nameRef}
           className="text-5xl md:text-7xl font-bold tracking-tight mb-6"
         >
-          João Silva
+          Rafael Gois
         </h1>
         <p 
           ref={titleRef}
           className="text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto"
         >
-          Desenvolvedor Full Stack especializado em criar experiências digitais excepcionais e interfaces interativas.
+          Full Stack Developer com foco em dados e BI, especializado em desenvolver ferramentas digitais que transformam dados operacionais em indicadores estratégicos.
         </p>
       </div>
     </section>

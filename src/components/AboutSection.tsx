@@ -62,7 +62,7 @@ const AboutSection = () => {
           <div ref={contentRef}>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">Sobre Mim</h2>
             <p className="text-lg text-gray-700 mb-4">
-              Sou um desenvolvedor full stack apaixonado por criar aplicações web modernas e responsivas. Com mais de 6 anos de experiência, tenho trabalhado em diversos projetos utilizando as mais recentes tecnologias do mercado.
+              Sou um desenvolvedor full stack apaixonado por criar aplicações web modernas e responsivas. Com mais de 3 anos de experiência, tenho trabalhado em diversos projetos utilizando as mais recentes tecnologias do mercado.
             </p>
             <p className="text-lg text-gray-700 mb-4">
               Minha jornada no desenvolvimento começou com HTML, CSS e JavaScript, mas rapidamente evoluí para frameworks como React.js e Next.js. No backend, trabalho principalmente com Node.js e Express.

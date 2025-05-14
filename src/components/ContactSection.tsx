@@ -56,23 +56,23 @@ const ContactSection = () => {
         
         <div 
           ref={contentRef}
-          className="max-w-3xl mx-auto text-center"
+          className="max-w-4xl mx-auto text-center"
         >
           <p className="text-xl mb-8">
             Interessado em trabalhar juntos? Entre em contato pelos canais abaixo.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
             <div className="p-6 border border-gray-200 rounded-lg">
               <div className="text-2xl mb-3">📧</div>
               <h3 className="text-lg font-medium mb-1">Email</h3>
-              <p className="text-gray-600">contato@exemplo.com</p>
+              <p className="text-gray-600">rafaelfontanabg@gmail.com</p>
             </div>
             
             <div className="p-6 border border-gray-200 rounded-lg">
               <div className="text-2xl mb-3">📱</div>
               <h3 className="text-lg font-medium mb-1">Telefone</h3>
-              <p className="text-gray-600">+55 (11) 9 9999-9999</p>
+              <p className="text-gray-600">+55 (49) 9 9102-4062</p>
             </div>
             
             <div className="p-6 border border-gray-200 rounded-lg">
@@ -94,17 +94,14 @@ const ContactSection = () => {
       <footer className="border-t border-gray-200 mt-12 pt-8 pb-8">
         <div className="max-w-6xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-600 mb-4 md:mb-0">
-            © 2025 Developer Portfolio. Todos os direitos reservados.
+            © 2025 Rafael Gois. Todos os direitos reservados.
           </p>
           <div className="flex space-x-6">
-            <a href="#" className="text-gray-600 hover:text-gray-900 transition">
+            <a href="https://www.linkedin.com/in/rafaelfbgois/" target="_blank" className="text-gray-600 hover:text-gray-900 transition">
               LinkedIn
             </a>
-            <a href="#" className="text-gray-600 hover:text-gray-900 transition">
+            <a href="https://github.com/RafaGois" target="_blank" className="text-gray-600 hover:text-gray-900 transition">
               GitHub
-            </a>
-            <a href="#" className="text-gray-600 hover:text-gray-900 transition">
-              Twitter
             </a>
           </div>
         </div>

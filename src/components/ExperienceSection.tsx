@@ -13,32 +13,25 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
-    id: 1,
-    company: "TechCorp",
-    role: "Senior Frontend Developer",
-    period: "2021 - Atual",
-    description: "Desenvolvimento de aplicações web com React.js e Next.js. Implementação de arquitetura de componentes escalável e desenvolvimento de interfaces responsivas."
-  },
-  {
     id: 2,
-    company: "WebSolutions",
-    role: "Full Stack Developer",
-    period: "2019 - 2021",
-    description: "Desenvolvimento de aplicações web completas utilizando Node.js no backend e React no frontend. Integração com APIs externas e implementação de autenticação e autorização."
+    company: "Mendes Máquinas",
+    role: "Proframador de Sistemas de Informação",
+    period: "2024 - Atual",
+    description: "Desenvolvendo aplicações que garantam a visualização da produção e controle do produto da empresa. Principal projeto foi uma aplicação full stack que buscou otimizar processos industriais e fornecer visualizações valiosos para a tomada de decisões, consiste em uma plataforma completa para gestão da produção em uma serraria. É uma solução que permite visualizar em tempo real o status da produção, gerar relatórios personalizados, identificar e solucionar problemas de forma ágil, controlar a manutenção de forma preventiva e preditiva e acompanhar o desempenho de cada máquina. Essa aplicação proporcionou uma visão completa do processo produtivo, facilitando a tomada de decisões estratégicas."
   },
   {
     id: 3,
-    company: "CreativeLabs",
-    role: "Frontend Developer",
-    period: "2017 - 2019",
-    description: "Criação de interfaces responsivas com HTML, CSS e JavaScript. Desenvolvimento de animações interativas e otimização de performance."
+    company: "Mendes Máquinas",
+    role: "Estagiário de Automação",
+    period: "2023 - 2024",
+    description: "Grande enfoque no desenvolvimento de apicações que auxiliem no controle, tanto dentro quanto fora da empresa, voltados para soluções internas e para o cliente. Como principais projetos podem ser citados alguns sistemas de controle de estoque, despacho de mercadoras, solicitações de pendências de campo, apontamento de horas de máquina, etc."
   },
   {
     id: 4,
-    company: "DigitalStartup",
-    role: "Web Developer",
-    period: "2015 - 2017",
-    description: "Desenvolvimento de websites e landing pages para clientes de diversos setores. Implementação de SEO e otimização para buscadores."
+    company: "Mendes Máquinas",
+    role: "Estagiário de PCP",
+    period: "2022 - 2023",
+    description: "Desenvolvi aplicações full stack focadas na otimização e controle de processos industriais. Como principal projeto, construí um aplicativo para gerenciar todas as etapas de produção, controlando todas as etadas das ordens de fabricação até a entrega do produto final. A partir disso foi possível visualizar em tempo real o progresso de cada produto, auxiliando a gestão na tomada de decisões estratégicas. Essa solução além de inovadora dentro da empresa, resultou não só na visualização dos dados pelos gestores, mas também deixou em evidência alguns processos que não eram vantajosos, além de proporcionar a criação de vários outros novos."
   }
 ];
 
