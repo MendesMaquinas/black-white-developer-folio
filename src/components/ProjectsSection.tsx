@@ -18,19 +18,6 @@ export interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "E-commerce Platform",
-    shortDescription: "Uma plataforma de e-commerce completa com painel administrativo.",
-    fullDescription: "Desenvolvimento de uma plataforma de e-commerce completa com funcionalidades como carrinho de compras, pagamento integrado, sistema de avaliações de produtos e painel administrativo para gestão de produtos, pedidos e clientes.",
-    thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-    images: [
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
-    ],
-    tags: ["React", "Node.js", "MongoDB", "Stripe"]
-  },
-  {
-    id: 2,
     title: "Dashboard Analytics",
     shortDescription: "Dashboard de análise de dados com visualizações interativas.",
     fullDescription: "Dashboard para análise de dados com visualizações interativas, filtros avançados e relatórios personalizados. Desenvolvido para uma empresa de marketing digital, permitindo visualização em tempo real do desempenho de campanhas.",
@@ -41,6 +28,23 @@ const projects: Project[] = [
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
     ],
     tags: ["Next.js", "Chart.js", "Firebase", "Tailwind CSS"]
+  },
+  {
+    id: 2,
+    title: "Controle de Serraria",
+    shortDescription: "Sistema de controle e BI de serrarias",
+    fullDescription: "Desenvolvimento de uma plataforma de e-commerce completa com funcionalidades como carrinho de compras, pagamento integrado, sistema de avaliações de produtos e painel administrativo para gestão de produtos, pedidos e clientes.",
+    thumbnail: "/public/controleserraria/currentdashboard.png",
+    images: [
+      "/public/controleserraria/stopsdashboard.png",
+      "/public/controleserraria/stopsscreen.png",
+      "/public/controleserraria/autostoppopup.png",
+      "/public/controleserraria/currentdashboard.png",
+      "/public/controleserraria/mobiledashboard.png",
+      "/public/controleserraria/mobilenavbar.png",
+      "/public/controleserraria/mobileregister.png",
+    ],
+    tags: ["React", "Node.js", "MongoDB", "Stripe"]
   },
   {
     id: 3,
@@ -57,6 +61,19 @@ const projects: Project[] = [
   },
   {
     id: 4,
+    title: "Project Management Tool",
+    shortDescription: "Ferramenta de gerenciamento de projetos inspirada no Trello.",
+    fullDescription: "Ferramenta de gerenciamento de projetos com quadros kanban, atribuição de tarefas, comentários, anexos de arquivos e sistema de notificações. Inspirada no Trello mas com funcionalidades adicionais para equipes de desenvolvimento.",
+    thumbnail: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+    images: [
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+    ],
+    tags: ["React", "Redux", "Express", "PostgreSQL"]
+  },
+  {
+    id: 5,
     title: "Project Management Tool",
     shortDescription: "Ferramenta de gerenciamento de projetos inspirada no Trello.",
     fullDescription: "Ferramenta de gerenciamento de projetos com quadros kanban, atribuição de tarefas, comentários, anexos de arquivos e sistema de notificações. Inspirada no Trello mas com funcionalidades adicionais para equipes de desenvolvimento.",
