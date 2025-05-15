@@ -81,11 +81,14 @@ const projects: Project[] = [
     a aprtir da aprovação o responsável irá movimentar o status daquela pendência, 
     chegando até a sua conclusão. Esse sistema teve um impacto muito significativo, pois através dele conseguiu-se ter o controle e a resolução do problema,
     além de disponibilizar os dados que mostraram os setores da empresa e motivos de maior não conformidades, garantindo uma ferramenta poderona para planos de ação mais inteligentes.`,
-    thumbnail: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+    thumbnail: "/public/controlesolicitacoescampo/registers.png",
     images: [
-      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+      "/public/controlesolicitacoescampo/login.png",
+      "/public/controlesolicitacoescampo/creation.png",
+      "/public/controlesolicitacoescampo/creation2.png",
+      "/public/controlesolicitacoescampo/inputimages.png",
+      "/public/controlesolicitacoescampo/registers.png",
+      "/public/controlesolicitacoescampo/table.png",
     ],
     tags: ["Next.js", "Typescript", "Express", "Node.js", "MS SQL Server", "Sequelize"]
   },
@@ -97,11 +100,12 @@ const projects: Project[] = [
            todos os despachos emitidos. Foi o meu primeiro sistema que trabalhou com imagens e arquivos .svg, onde ao ser criado um despacho é anexado imagens do mesmo
            junto com a assinatura do responsável pelo transporte. Essa função possibilitou para o setor uma grande melhora na confiabilidade e segurança no trabalho, 
            pois além de possibilitar o controle do processo, eliminou os extravios e consequente prejuízos e retrabalhos. `,
-    thumbnail: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+    thumbnail: "/public/despacho/dashboard.png",
     images: [
-      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+      "/public/despacho/login.png",
+      "/public/despacho/creation.png",
+      "/public/despacho/dashboard.png",
+      "/public/despacho/creation.png"
     ],
     tags: ["React.js", "Typescript"]
   },
@@ -111,10 +115,14 @@ const projects: Project[] = [
     shortDescription: `App de controle de emissão de despachos.`,
     fullDescription: `App mobile no qual são emitidos os registros de despachos, fazendo uma relação direta 
           com o site de despachos.`,
-    thumbnail: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+    thumbnail: "/public/despacho-app/menu.png",
     images: [
+      "/public/despacho-app/login.png",
       "/public/despacho-app/menu.png",
-      "/public/despacho-app/"
+      "/public/despacho-app/image.png",
+      "/public/despacho-app/new.png",
+      "/public/despacho-app/new2.png",
+      "/public/despacho-app/registers.png",
     ],
     tags: ["React.js", "Typescript"]
   },
@@ -124,7 +132,7 @@ const projects: Project[] = [
     shortDescription: `App de controle de notificaçôes internas.`,
     fullDescription: `App de controle de notificações internas. A partir dele são emitidos todos os registros de não conformidades, junto com o plano de resolução, que acompanha o registro da mesma. Esse sistema teve um impacto muito significativo pois simplificou um processo que era muito burocrático além de 
           possibilitar para os gestores uma visualização completa das maiores fontes e causas dos problemas dentro da empresa.`,
-    thumbnail: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+    thumbnail: "/public/notificacao/Captura de tela 2023-11-21 142713.png",
     images: [
       "/public/notificacao/Captura de tela 2023-11-21 142618.png",
       "/public/notificacao/Captura de tela 2023-11-21 142713.png",

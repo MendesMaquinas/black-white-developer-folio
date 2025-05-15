@@ -76,8 +76,7 @@ const ProjectDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white pt-20">
-      {/* Back button at top left */}
+    <div className="min-h-screen bg-white">
       <div className="absolute top-20 left-6 z-20">
         <Link to="/#projects">
           <Button variant="outline" size="sm" className="gap-1">
