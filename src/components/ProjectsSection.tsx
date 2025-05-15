@@ -108,9 +108,8 @@ const projects: Project[] = [
           com o site de despachos.`,
     thumbnail: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
     images: [
-      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+      "/public/despacho-app/menu.png",
+      "/public/despacho-app/"
     ],
     tags: ["React.js", "Typescript"]
   },
