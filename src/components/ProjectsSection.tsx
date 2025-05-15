@@ -17,19 +17,6 @@ export interface Project {
 
 const projects: Project[] = [
   {
-    id: 1,
-    title: "Dashboard Analytics",
-    shortDescription: "Dashboard de análise de dados com visualizações interativas.",
-    fullDescription: "Dashboard para análise de dados com visualizações interativas, filtros avançados e relatórios personalizados. Desenvolvido para uma empresa de marketing digital, permitindo visualização em tempo real do desempenho de campanhas.",
-    thumbnail: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    images: [
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
-    ],
-    tags: ["Next.js", "Chart.js", "Firebase", "Tailwind CSS"]
-  },
-  {
     id: 2,
     title: "Controle de Serraria",
     shortDescription: "Sistema de controle e BI de serrarias",
@@ -99,16 +86,47 @@ const projects: Project[] = [
   },
   {
     id: 6,
-    title: "Controle Despachos",
+    title: "Dashboard Controle Despachos",
     shortDescription: `Sistema de controle de despachos de almoxarifado.`,
-    fullDescription: ``,
+    fullDescription: `Sistema de controle de despachos que funciona no almoxarifado da empresa e possibilita a emissão, visaulização e controle de
+           todos os despachos emitidos. Foi o meu primeiro sistema que trabalhou com imagens e arquivos .svg, onde ao ser criado um despacho é anexado imagens do mesmo
+           junto com a assinatura do responsável pelo transporte. Essa função possibilitou para o setor uma grande melhora na confiabilidade e segurança no trabalho, 
+           pois além de possibilitar o controle do processo, eliminou os extravios e consequente prejuízos e retrabalhos. `,
     thumbnail: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
     images: [
       "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
       "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
     ],
-    tags: ["React", "Redux", "Express", "PostgreSQL"]
+    tags: ["React.js", "Typescript"]
+  },
+  {
+    id: 7,
+    title: "App de Controle Despachos",
+    shortDescription: `App de controle de emissão de despachos.`,
+    fullDescription: `App mobile no qual são emitidos os registros de despachos, fazendo uma relação direta 
+          com o site de despachos.`,
+    thumbnail: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+    images: [
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+    ],
+    tags: ["React.js", "Typescript"]
+  },
+  {
+    id: 8,
+    title: "App de Controle Notificações",
+    shortDescription: `App de controle de notificaçôes internas.`,
+    fullDescription: `App de controle de notificações internas. A partir dele são emitidos todos os registros de não conformidades, junto com o plano de resolução, que acompanha o registro da mesma. Esse sistema teve um impacto muito significativo pois simplificou um processo que era muito burocrático além de 
+          possibilitar para os gestores uma visualização completa das maiores fontes e causas dos problemas dentro da empresa.`,
+    thumbnail: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+    images: [
+      "/public/notificacao/Captura de tela 2023-11-21 142618.png",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+    ],
+    tags: ["Android", "Java", "Android Studio", "Javascript", "Node.js", "Express"]
   }
 ];
 
