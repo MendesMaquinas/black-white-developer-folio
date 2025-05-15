@@ -3,13 +3,7 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious
-} from "@/components/ui/carousel";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
 export interface Project {
   id: number;
@@ -193,48 +187,59 @@ const ProjectsSection = () => {
           Projetos
         </h2>
         
-        <Carousel 
-          className="w-full" 
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-        >
-          <CarouselContent className="-ml-2 md:-ml-4">
-            {projects.map((project) => (
-              <CarouselItem 
-                key={project.id} 
-                className="pl-2 md:pl-4 sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
-              >
-                <Link to={`/project/${project.id}`} className="block group h-full">
-                  <div className="relative mb-4 overflow-hidden rounded-lg aspect-[4/3]">
-                    <img 
-                      src={project.thumbnail} 
-                      alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  <h3 className="text-xl font-medium mb-2 group-hover:text-gray-300 transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-400 mb-4">
-                    {project.shortDescription}
-                  </p>
-                  <div className="inline-flex items-center text-sm font-medium">
-                    Ver projeto
-                    <svg className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {projects.map((project) => (
+            <Card 
+              key={project.id}
+              className="bg-zinc-900 border-zinc-800 hover:border-zinc-700 transition-colors overflow-hidden h-full"
+            >
+              <div className="relative overflow-hidden aspect-[4/3]">
+                <img 
+                  src={project.thumbnail} 
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                />
+              </div>
+              
+              <CardContent className="p-5">
+                <h3 className="text-xl font-medium mb-2 text-white">
+                  {project.title}
+                </h3>
+                <p className="text-gray-400 text-sm mb-4 line-clamp-2">
+                  {project.shortDescription}
+                </p>
+                
+                <div className="flex flex-wrap gap-2 mb-2">
+                  {project.tags.slice(0, 3).map((tag, index) => (
+                    <span 
+                      key={index}
+                      className="text-xs px-2 py-1 bg-zinc-800 text-zinc-300 rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                  {project.tags.length > 3 && (
+                    <span className="text-xs px-2 py-1 bg-zinc-800 text-zinc-300 rounded-full">
+                      +{project.tags.length - 3}
+                    </span>
+                  )}
+                </div>
+              </CardContent>
+              
+              <CardFooter className="p-5 pt-0">
+                <Link 
+                  to={`/project/${project.id}`}
+                  className="inline-flex items-center text-sm font-medium text-white hover:text-gray-300 transition-colors group"
+                >
+                  Ver projeto
+                  <svg className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
                 </Link>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <div className="hidden md:flex items-center justify-end gap-2 mt-8">
-            <CarouselPrevious className="relative inset-auto h-10 w-10 border-white text-white hover:bg-white/20 hover:text-white" />
-            <CarouselNext className="relative inset-auto h-10 w-10 border-white text-white hover:bg-white/20 hover:text-white" />
-          </div>
-        </Carousel>
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   );
