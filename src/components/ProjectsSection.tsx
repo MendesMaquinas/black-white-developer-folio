@@ -3,7 +3,13 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from "@/components/ui/carousel";
 
 export interface Project {
   id: number;
@@ -15,6 +21,7 @@ export interface Project {
   tags: string[];
 }
 
+// Keep the projects data
 const projects: Project[] = [
   {
     id: 2,
@@ -143,15 +150,13 @@ export const getProjects = () => projects;
 const ProjectsSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const projectRefs = useRef<(HTMLDivElement | null)[]>([]);
   
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+    gsap.registerPlugin(ScrollTrigger);
     
-    if (!sectionRef.current || !scrollContainerRef.current) return;
+    // Simple animation just for the title
+    if (!titleRef.current || !sectionRef.current) return;
     
-    // Animate section title
     gsap.fromTo(
       titleRef.current,
       { y: 30, opacity: 0 },
@@ -167,45 +172,6 @@ const ProjectsSection = () => {
       }
     );
     
-    // Set up horizontal scroll
-    let horizontalScroll;
-    
-    if (window.innerWidth > 768) {
-      horizontalScroll = gsap.to(scrollContainerRef.current, {
-        x: () => -(scrollContainerRef.current!.scrollWidth - window.innerWidth + 48),
-        ease: "none",
-        scrollTrigger: {
-          trigger: scrollContainerRef.current,
-          start: "top 20%",
-          end: () => `+=${scrollContainerRef.current!.scrollWidth - window.innerWidth}`,
-          scrub: 1,
-          pin: true,
-          anticipatePin: 1,
-          invalidateOnRefresh: true
-        }
-      });
-    }
-    
-    // Animate each project card
-    projectRefs.current.forEach((project, index) => {
-      gsap.fromTo(
-        project,
-        { y: 30, opacity: 0 },
-        { 
-          y: 0, 
-          opacity: 1, 
-          duration: 0.6,
-          delay: 0.1 * index,
-          scrollTrigger: {
-            trigger: project,
-            start: "top 80%",
-            toggleActions: "play none none reverse",
-            containerAnimation: horizontalScroll
-          }
-        }
-      );
-    });
-    
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
@@ -215,34 +181,35 @@ const ProjectsSection = () => {
     <section 
       id="projects" 
       ref={sectionRef}
-      className="py-24 bg-black text-white overflow-hidden"
+      className="py-24 bg-black text-white"
     >
-      <div className="px-6 md:px-12">
+      <div className="px-6 md:px-12 max-w-7xl mx-auto">
         <h2 
           ref={titleRef}
-          className="text-3xl md:text-4xl font-bold mb-12 tracking-tight max-w-6xl mx-auto"
+          className="text-3xl md:text-4xl font-bold mb-12 tracking-tight"
         >
           Projetos
         </h2>
         
-        <div 
-          ref={scrollContainerRef}
-          className="flex md:min-h-[500px] pb-12 overflow-x-auto md:overflow-visible"
-          style={{ scrollbarWidth: 'none' }} // Hide scrollbar for Firefox
+        <Carousel 
+          className="w-full" 
+          opts={{
+            align: "start",
+            loop: true,
+          }}
         >
-          <div className="flex gap-8 md:gap-12 px-6">
-            {projects.map((project, index) => (
-              <div 
-                key={project.id}
-                ref={el => projectRefs.current[index] = el}
-                className="min-w-[280px] sm:min-w-[350px] md:min-w-[400px] flex-shrink-0"
+          <CarouselContent className="-ml-2 md:-ml-4">
+            {projects.map((project) => (
+              <CarouselItem 
+                key={project.id} 
+                className="pl-2 md:pl-4 sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
               >
-                <Link to={`/project/${project.id}`} className="block group">
-                  <div className="mb-6 overflow-hidden">
+                <Link to={`/project/${project.id}`} className="block group h-full">
+                  <div className="relative mb-4 overflow-hidden rounded-lg aspect-[4/3]">
                     <img 
                       src={project.thumbnail} 
                       alt={project.title}
-                      className="w-full h-[250px] object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                   <h3 className="text-xl font-medium mb-2 group-hover:text-gray-300 transition-colors">
@@ -258,10 +225,14 @@ const ProjectsSection = () => {
                     </svg>
                   </div>
                 </Link>
-              </div>
+              </CarouselItem>
             ))}
+          </CarouselContent>
+          <div className="hidden md:flex items-center justify-end gap-2 mt-8">
+            <CarouselPrevious className="relative inset-auto h-10 w-10 border-white text-white hover:bg-white/20 hover:text-white" />
+            <CarouselNext className="relative inset-auto h-10 w-10 border-white text-white hover:bg-white/20 hover:text-white" />
           </div>
-        </div>
+        </Carousel>
       </div>
     </section>
   );
