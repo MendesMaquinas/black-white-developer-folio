@@ -123,8 +123,17 @@ const projects: Project[] = [
     thumbnail: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
     images: [
       "/public/notificacao/Captura de tela 2023-11-21 142618.png",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+      "/public/notificacao/Captura de tela 2023-11-21 142713.png",
+      "/public/notificacao/Captura de tela 2023-11-21 142801.png",
+      "/public/notificacao/Captura de tela 2023-11-21 142829.png",
+      "/public/notificacao/Captura de tela 2023-11-21 142933.png",
+      "/public/notificacao/Captura de tela 2023-11-21 142903.png",
+      "/public/notificacao/Captura de tela 2023-11-21 142928.png",
+      "/public/notificacao/Captura de tela 2023-11-21 143120.png",
+      "/public/notificacao/Captura de tela 2023-11-29 080746.png",
+      "/public/notificacao/Captura de tela 2023-11-29 080809.png",
+      "/public/notificacao/Captura de tela 2023-11-29 080840.png",
+      "/public/notificacao/Captura de tela 2023-11-29 080854.png",
     ],
     tags: ["Android", "Java", "Android Studio", "Javascript", "Node.js", "Express"]
   }
