@@ -53,11 +53,13 @@ const projects: Project[] = [
     gerados e movimentados por ele criar BIs que mostrassem o quão pronta uma máquina estava, desde o escopo geral como um todo a até 
     individuamlente pelos seus conjuntos. Acredito que até hoje essa foi uma das minahs soluções mais impactantes, pois garantiu pra a gestão uma visaulização segura e confiante de
     como estava a sitaução da máquina em geral, podendo principalmente disponibilizar uma análise de como está a presente situação para que sejam tomadas decisões de como agir no futuro.`,
-    thumbnail: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+    thumbnail: "/public/controlafabrica/status.png",
     images: [
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f"
+      "/public/controlafabrica/login.png",
+      "/public/controlafabrica/of.png",
+      "/public/controlafabrica/scan.png",
+      "/public/controlafabrica/status.png",
+      "/public/controlafabrica/done.png",
     ],
     tags: ["Android", "Java", "Spring", "Android Studio"]
   },
