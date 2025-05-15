@@ -1,3 +1,4 @@
+
 import { useEffect, useRef, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import gsap from "gsap";
@@ -14,6 +15,7 @@ const ProjectDetail = () => {
   const galleryRef = useRef<HTMLDivElement>(null);
 
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [imageOrientation, setImageOrientation] = useState<"landscape" | "portrait">("landscape");
 
   useEffect(() => {
     if (!headerRef.current) return;
@@ -46,6 +48,13 @@ const ProjectDetail = () => {
 
   const handleImageClick = (image: string) => {
     setSelectedImage(image);
+    
+    // Determine orientation for the dialog display
+    const img = new Image();
+    img.onload = () => {
+      setImageOrientation(img.width >= img.height ? "landscape" : "portrait");
+    };
+    img.src = image;
   };
 
   const handleCloseDialog = () => {
@@ -122,19 +131,23 @@ const ProjectDetail = () => {
           ref={galleryRef}
           className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12"
         >
-          {project.images.map((image, index) => (
-            <div
-              key={index}
-              className="overflow-hidden rounded-lg cursor-pointer transition-all hover:shadow-lg"
-              onClick={() => handleImageClick(image)}
-            >
-              <img
-                src={image}
-                alt={`${project.title} - imagem ${index + 1}`}
-                className="w-full h-[250px] object-cover transition-transform hover:scale-105 duration-500"
-              />
-            </div>
-          ))}
+          {project.images.map((image, index) => {
+            return (
+              <div
+                key={index}
+                className="overflow-hidden rounded-lg cursor-pointer transition-all hover:shadow-lg"
+                onClick={() => handleImageClick(image)}
+              >
+                <div className="w-full h-[250px] relative">
+                  <img
+                    src={image}
+                    alt={`${project.title} - imagem ${index + 1}`}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+            );
+          })}
         </div>
 
         <div className="text-center mt-16">
@@ -159,21 +172,22 @@ const ProjectDetail = () => {
           </Link>
         </div>
       </div>
+      
       <Dialog open={!!selectedImage} onOpenChange={handleCloseDialog}>
         <DialogContent
           className="max-w-5xl p-0 bg-black border-none overflow-hidden"
           onPointerDownOutside={handleCloseDialog}
         >
           <div className="w-full flex items-center justify-center p-2">
-            <AspectRatio ratio={16 / 9} className="w-full">
-              {selectedImage && (
+            {selectedImage && (
+              <div className={`max-w-full max-h-[80vh] ${imageOrientation === "portrait" ? "w-auto h-auto" : "w-full"}`}>
                 <img
                   src={selectedImage}
                   alt="Imagem expandida"
                   className="w-full h-full object-contain"
                 />
-              )}
-            </AspectRatio>
+              </div>
+            )}
           </div>
         </DialogContent>
       </Dialog>
