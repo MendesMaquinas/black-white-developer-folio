@@ -4,7 +4,8 @@ import { useParams, Link } from "react-router-dom";
 import gsap from "gsap";
 import { Project, getProjects } from "@/components/ProjectsSection";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 
 const ProjectDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -76,6 +77,16 @@ const ProjectDetail = () => {
 
   return (
     <div className="min-h-screen bg-white pt-20">
+      {/* Back button at top left */}
+      <div className="absolute top-20 left-6 z-20">
+        <Link to="/#projects">
+          <Button variant="outline" size="sm" className="gap-1">
+            <ArrowLeft size={16} />
+            Voltar para projetos
+          </Button>
+        </Link>
+      </div>
+      
       <div
         ref={headerRef}
         className="w-full h-[50vh] bg-black relative flex items-center justify-center"
@@ -101,22 +112,6 @@ const ProjectDetail = () => {
               </span>
             ))}
           </div>
-          <Link to="/#projects" className="inline-flex items-center text-white">
-            <svg
-              className="mr-2 w-4 h-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M10 19l-7-7m0 0l7-7m-7 7h18"
-              />
-            </svg>
-            Voltar para projetos
-          </Link>
         </div>
       </div>
 
@@ -148,28 +143,6 @@ const ProjectDetail = () => {
               </div>
             );
           })}
-        </div>
-
-        <div className="text-center mt-16">
-          <Link
-            to="/#contact"
-            className="inline-flex items-center justify-center px-6 py-3 bg-black text-white rounded-md transition hover:bg-gray-800"
-          >
-            Vamos trabalhar juntos
-            <svg
-              className="ml-2 w-4 h-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              />
-            </svg>
-          </Link>
         </div>
       </div>
       
