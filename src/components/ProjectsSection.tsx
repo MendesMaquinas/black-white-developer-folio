@@ -33,7 +33,10 @@ const projects: Project[] = [
     id: 2,
     title: "Controle de Serraria",
     shortDescription: "Sistema de controle e BI de serrarias",
-    fullDescription: "Desenvolvimento de uma plataforma de e-commerce completa com funcionalidades como carrinho de compras, pagamento integrado, sistema de avaliações de produtos e painel administrativo para gestão de produtos, pedidos e clientes.",
+    fullDescription: `Desenvolvimento de uma plataforma de controle de todos os processo envolvendo uma serraria, desde a visaulização com telas e gráficos customizaveis sobre a produção,
+    até a geração de relatórios dos demais processos, como por exemplo de paradas de linha de produção, com gráficos de pareto indicanto as maiores causas e áreas das paradas, rastreio e
+    controle de pacotes, etc. A partir desse sistema a gestão pode ter uma visaulização completa não só do que foi produzido, mas também dos demais indicadores que envolvem os demais escopos
+    envovidos em todo o processo. Foi Nesse projeto que desenvolvi minhas habilidades de processamento e representação dos dados, pois em cada cliente existem alterações e customizações únicas, como relatórios e gráficos referentes aos mais diferentes escopos.`,
     thumbnail: "/public/controleserraria/currentdashboard.png",
     images: [
       "/public/controleserraria/stopsdashboard.png",
@@ -44,39 +47,61 @@ const projects: Project[] = [
       "/public/controleserraria/mobilenavbar.png",
       "/public/controleserraria/mobileregister.png",
     ],
-    tags: ["React", "Node.js", "MongoDB", "Stripe"]
+    tags: ["Next.js", "Typescript", "Node.js", "MS SQL Server", "Prisma.js", "Express"]
   },
   {
     id: 3,
-    title: "Social Network App",
-    shortDescription: "Aplicativo de rede social com recursos de mensagens e feed de atividades.",
-    fullDescription: "Aplicativo de rede social com feed de atividades, sistema de mensagens privadas, notificações em tempo real e perfis personalizáveis. Recursos de descoberta de conteúdo e conexão entre usuários.",
+    title: "Controla Fábrica",
+    shortDescription: "Aplicativo mobile de controle de ordens de fabricação.",
+    fullDescription: `Aplicativo que funciona no 'chão de fábrica', envolve o escopo de planejamento e controle de processos e 
+    se comunica com as ordens de fabricação referentes a máquina, possibilitando a atualização do status atual referente a mesma.
+    A partir do uso desse aplicativo foi possível criar os registros de como a situação de cada peça estava dentro da fábrica, e a partir dos dados
+    gerados e movimentados por ele criar BIs que mostrassem o quão pronta uma máquina estava, desde o escopo geral como um todo a até 
+    individuamlente pelos seus conjuntos. Acredito que até hoje essa foi uma das minahs soluções mais impactantes, pois garantiu pra a gestão uma visaulização segura e confiante de
+    como estava a sitaução da máquina em geral, podendo principalmente disponibilizar uma análise de como está a presente situação para que sejam tomadas decisões de como agir no futuro.`,
     thumbnail: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
     images: [
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
       "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f"
     ],
-    tags: ["React Native", "Express", "Socket.io", "MongoDB"]
+    tags: ["Android", "Java", "Spring", "Android Studio"]
   },
   {
     id: 4,
-    title: "Project Management Tool",
-    shortDescription: "Ferramenta de gerenciamento de projetos inspirada no Trello.",
-    fullDescription: "Ferramenta de gerenciamento de projetos com quadros kanban, atribuição de tarefas, comentários, anexos de arquivos e sistema de notificações. Inspirada no Trello mas com funcionalidades adicionais para equipes de desenvolvimento.",
+    title: "Controle Siderurgico",
+    shortDescription: "Aplicativo de controle de matéria prima de siderurgicos",
+    fullDescription: `Aplicativo que faz o controle do estoque das matérias primas de siderurgicos, a apartir dele e de etiquetas vinculadas ao produto 
+    os operadores podem movimentar o consumo do estoque, possibilitando para os setores de compras e engenharia uma visualização segura da sitaução atual, podendo garantir planos de ação, como por exemplo a antecipação ou prorrogação da compra de algum material.`,
+    thumbnail: "/public/controlesiderurgico/menu.png",
+    images: [
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+    ],
+    tags: ["Android", "Java", "Android Studio", "Javascript", "Node.js", "Express"]
+  },
+  {
+    id: 5,
+    title: "Controle de solicitações de campo",
+    shortDescription: `Sistema de controle de solicitações de campo.`,
+    fullDescription: `Sistema de controle de solicitações de campo, onde os usuários podem criar uma solicitação e destinar para um responsável a partir de uma pré aprovação do gestor do mesmo feita dentro do próprio sistema, 
+    a aprtir da aprovação o responsável irá movimentar o status daquela pendência, 
+    chegando até a sua conclusão. Esse sistema teve um impacto muito significativo, pois através dele conseguiu-se ter o controle e a resolução do problema,
+    além de disponibilizar os dados que mostraram os setores da empresa e motivos de maior não conformidades, garantindo uma ferramenta poderona para planos de ação mais inteligentes.`,
     thumbnail: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
     images: [
       "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
       "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
     ],
-    tags: ["React", "Redux", "Express", "PostgreSQL"]
+    tags: ["Next.js", "Typescript", "Express", "Node.js", "MS SQL Server", "Sequelize"]
   },
   {
-    id: 5,
-    title: "Project Management Tool",
-    shortDescription: "Ferramenta de gerenciamento de projetos inspirada no Trello.",
-    fullDescription: "Ferramenta de gerenciamento de projetos com quadros kanban, atribuição de tarefas, comentários, anexos de arquivos e sistema de notificações. Inspirada no Trello mas com funcionalidades adicionais para equipes de desenvolvimento.",
+    id: 6,
+    title: "Controle Despachos",
+    shortDescription: `Sistema de controle de despachos de almoxarifado.`,
+    fullDescription: ``,
     thumbnail: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
     images: [
       "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
