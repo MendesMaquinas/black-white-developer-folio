@@ -65,9 +65,11 @@ const projects: Project[] = [
     os operadores podem movimentar o consumo do estoque, possibilitando para os setores de compras e engenharia uma visualização segura da sitaução atual, podendo garantir planos de ação, como por exemplo a antecipação ou prorrogação da compra de algum material.`,
     thumbnail: "/public/controlesiderurgico/menu.png",
     images: [
-      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+      "/public/controlesiderurgico/login.png",
+      "/public/controlesiderurgico/menu.png",
+      "/public/controlesiderurgico/enter.png",
+      "/public/controlesiderurgico/fragment.png",
+      "/public/controlesiderurgico/scanner.png",
     ],
     tags: ["Android", "Java", "Android Studio", "Javascript", "Node.js", "Express"]
   },
