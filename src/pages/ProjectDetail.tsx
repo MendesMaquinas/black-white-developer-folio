@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import gsap from "gsap";
-import { Project, getProjects } from "@/components/ProjectsSection";
+import { getProjects } from "@/components/ProjectsSection";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
@@ -77,7 +77,7 @@ const ProjectDetail = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="absolute top-20 left-6 z-20">
+      <div className="absolute top-8 left-6 z-20">
         <Link to="/#projects">
           <Button variant="outline" size="sm" className="gap-1">
             <ArrowLeft size={16} />
